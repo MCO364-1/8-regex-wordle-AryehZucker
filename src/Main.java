@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -21,6 +23,17 @@ public class Main {
 
     public static boolean palindrome(String s) {
         return palindromePattern.matcher(s.toLowerCase()).matches();
+    }
+
+    /*
+     * returns all matches for the previous wordle responses.
+     * For example if response for `TRAIN` is all gray and response for `COUGH` is
+     * all yellow, the method should return all words containing letters C,O,U,G,H,
+     * but not "COUGH" and not words with letters T,R,A,I,N.
+     */
+    public static List<String> wordleMatches(List<List<WordleResponse>> previousResponses)
+            throws FileNotFoundException {
+        return new WordleGuessGenerator().getValidGuesses(previousResponses);
     }
 
 }
