@@ -1,0 +1,4 @@
+Challenges & Decisions:
+- Decided to use parameterized tests to make the tests more concise
+- I was not sure how to do the palindrome test with RegEx until I learned about backreference
+- I was having some difficulty figuring out how to implement the wordle guess generator with RegEx, but then we worked out the solution in class
